@@ -88,6 +88,7 @@
 
   <use x="350" y="300" href="#forest"/>
   <use x="450" y="250" href="#forest"/>
+  <use x="200" y="200" href="#forest"/>
   <use x="0" y="0" href="#skiGuyFalling"/>
 
 </svg>
