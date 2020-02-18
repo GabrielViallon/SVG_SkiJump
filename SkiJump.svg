@@ -2,26 +2,6 @@
 <?xml-stylesheet type="text/css" href="handson.css" ?>
 <svg xmlns="http://www.w3.org/2000/svg" width="750" height="500" viewBox="0 0 750 500" xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-  <!-- background -->
-  
-<g id="background">
-  <rect x="0" y="0" width="750" height="500" style="fill:lightblue" />
-  <polygon points="350 100 100 500 700 500" fill="grey"/>
-  <polygon points="50 50 -100 500 300 500" fill="darkgrey"/>
-  <polygon points="750 0 750 500 350 500" fill="#ededed"/>
-  <path d="M 710 50 q -250 350 -340 300" stroke="darkgrey"
-    stroke-width="5" fill="none" id="ramp"/>
-  <path d="M 370 350 l 20 100" stroke="darkgrey" stroke-width="5" fill="none" />
-  <use x="350" y="300" href="#forest"/>
-  <use x="450" y="250" href="#forest"/>
-  <use x="50" y="150" href="#forest"/>
-  <use x="700" y="350" href="#building"/>
-  <use x="600" y="400" href="#building"/>
-  <use x="700" y="375" href="#cheeringCrowd"/>
-  <use x="650" y="400" href="#cheeringCrowd"/>
-
-</g>
-
   <!-- Definitions des objets-->
   
   <defs>
@@ -92,9 +72,27 @@
     </g>
 
   </defs>
-  
-  <!-- Animation personnages-->
-  
-  <use x="0" y="0" href="#skiGuyFalling"/>
+
+  <!-- scenes -->
+
+  <g id="scene1">
+    <polygon points="0 500 100 0 750 0 750 500" fill="#ededed"/>
+  </g>
+
+  <g id="scene2" visibility="hidden">
+    <rect x="0" y="0" width="750" height="500" style="fill:lightblue" />
+    <polygon points="350 100 100 500 700 500" fill="grey"/>
+    <polygon points="50 50 -100 500 300 500" fill="darkgrey"/>
+    <polygon points="750 0 750 500 350 500" fill="#ededed"/>
+    <path d="M 710 50 q -250 350 -340 300" stroke="darkgrey"
+      stroke-width="5" fill="none" id="ramp"/>
+    <path d="M 370 350 l 20 100" stroke="darkgrey" stroke-width="5" fill="none" />
+    <use x="350" y="300" href="#forest"/>
+    <use x="450" y="250" href="#forest"/>
+    <use x="50" y="150" href="#forest"/>
+    <use x="700" y="350" href="#building"/>
+    <use x="600" y="400" href="#building"/>
+    <use x="700" y="375" href="#cheeringCrowd"/>
+    <use x="650" y="400" href="#cheeringCrowd"/>
 
 </svg>
