@@ -1,0 +1,93 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="handson.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="500" viewBox="0 0 750 500" xmlns:xlink="http://www.w3.org/1999/xlink" >
+
+<g id="background">
+  <rect x="0" y="0" width="750" height="500" style="fill:lightblue" />
+  <polygon points="350 100 100 500 700 500" fill="grey"/>
+  <polygon points="50 50 -100 500 300 500" fill="darkgrey"/>
+  <polygon points="750 0 750 500 350 500" fill="#ededed"/>
+  <path d="M 710 50 q -250 350 -340 300" stroke="darkgrey"
+    stroke-width="5" fill="none" id="ramp"/>
+  <path d="M 370 350 l 20 100" stroke="darkgrey" stroke-width="5" fill="none" />
+  <use x="700" y="350" href="#building"/>
+  <use x="600" y="400" href="#building"/>
+  <use x="700" y="375" href="#cheeringCrowd"/>
+  <use x="650" y="400" href="#cheeringCrowd"/>
+
+</g>
+
+  <defs>
+    <g id="skiGuy">
+      <g id="skiGuyTorso" transform="rotate(-45)">
+        <ellipse cx="50" cy="-10" rx="10" ry="30" style="fill:red" />
+        <circle cx="50" cy="-45" r="12" stroke="black" stroke-width="2" fill="pink" />
+      </g>
+    <g id="skiGuyLegs">
+      <ellipse cx="25" cy="-22" rx="20" ry="4"
+      style="fill:red" />
+      <ellipse cx="10" cy="-5" rx="4" ry="20"
+      style="fill:red" />
+    </g>
+    <g id="skis">
+      <rect x="-40" y="15" width="100" height="5" style="fill:black" />
+    </g>
+  </g>
+
+  <g id="skiGuyFalling">
+    <use x="0" y="0" href="#skiGuy" transform="translate(0 -5) scale(0.4)"/>
+    <animateTransform
+        attributeName="transform" type="rotate" values="-45; -45; -30; 15"
+        begin="0s" dur="2.5s" repeatCount="indefinite"/>
+    <animateMotion dur="2.5s" repeatCount="indefinite">
+        <mpath href="#ramp"></mpath>
+      </animateMotion>
+  </g>
+
+  <g id="jumpingGuy">
+    <ellipse cx="0" cy="-30" rx="15" ry="30"
+    style="stroke:black;stroke-width:2" />
+    <circle cx="0" cy="-65" r="12" stroke="black" stroke-width="2" fill="pink" />
+    <animateTransform
+        attributeName="transform" type="translate" values="0 0; 0 -25; 0 0"
+        begin="0s" dur="1s" repeatCount="indefinite"/>
+  </g>
+
+  <g id="cheeringCrowd" transform="scale(0.5)">
+    <use x="-50" y="0" href="#jumpingGuy" style="fill:red"/>
+    <use x="-10" y="0" href="#jumpingGuy" style="fill:blue"/>
+    <use x="40" y="0" href="#jumpingGuy" style="fill:green"/>
+  </g>
+
+    <g id="window">
+      <rect x="-20" y="0" width="40" height="40" style="fill:blue"/>
+    </g>
+
+    <g id="building" transform="scale(0.4)">
+      <polygon points="-100 -200 0 -275 100 -200" fill="brown"/>
+      <rect x="-100" y="-200" width="200" height="200" style="fill:orange"/>
+      <rect x="-20" y="-70" width="40" height="70" style="fill:brown" />
+      <use x="-50" y="-150" href="#window"/>
+      <use x="50" y="-150" href="#window"/>
+    </g>
+
+    <g id="tree">
+      <rect x="-5" y="-75" width="10" height="75" style="fill:brown"/>
+      <polygon points="0 -100 -35 -55 35 -55" fill="green"/>
+      <polygon points="0 -120 -30 -80 30 -80" fill="green"/>
+      <polygon points="0 -140 -25 -100 25 -100" fill="green"/>
+    </g>
+
+    <g id="forest" transform="scale(0.4)">
+      <use x="0" y="0" href="#tree"/>
+      <use x="-40" y="10" href="#tree"/>
+      <use x="40" y="0" href="#tree"/>
+    </g>
+
+  </defs>
+
+  <use x="350" y="300" href="#forest"/>
+  <use x="450" y="250" href="#forest"/>
+  <use x="0" y="0" href="#skiGuyFalling"/>
+
+</svg>
